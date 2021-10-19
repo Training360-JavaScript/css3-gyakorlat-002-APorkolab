@@ -108,7 +108,8 @@ body {
 /* 9: a menu__hamburger osztályú elemeken belül lévő span elemek 
 before vagy after pszeudo-elemei */
 
-.menu__hamburger>span ::content {
+.menu__hamburger span:before,
+.menu__hamburger span:after {
     position: absolute;
     display: block;
     left: 0;
@@ -130,7 +131,7 @@ before pszeudo-elemei */
 /* 11: a menu__hamburger osztályú elemeken belül lévő span elemek
  after pszeudo-elemei */
 
-.menu__hamburger span:after {
+.menu__hamburger>span::after {
     bottom: -15px;
 }
 
@@ -145,7 +146,8 @@ before pszeudo-elemei */
 /* 13: a menu__hamburger--htx osztályú elemeken belül lévő span elemek 
 before vagy after pszeudo-elemei */
 
-.menu__hamburger--htx>span ::content {
+.menu__hamburger--htx span:before,
+.menu__hamburger--htx span:after {
     transition-duration: 0.3s, 0.3s;
     transition-delay: 0.3s, 0s;
 }
@@ -162,7 +164,7 @@ before pszeudo-elemei */
 /* 15: a menu__hamburger--htx osztályú elemeken belül lévő span elemek 
 after pszeudo-elemei */
 
-.menu__hamburger--htx>span::after {
+.menu__hamburger--htx span::after {
     transition-property: bottom, transform;
 }
 
@@ -178,7 +180,7 @@ after pszeudo-elemei */
 /* 17: a menu__hamburger--htx és az is-active osztályhoz egyszerre tartozó
  elemeken belül lévő span elemek before pszeudo-elemei */
 
-.menu__hamburger--htx.is-active>span:before {
+.menu__hamburger--htx.is-active span::before {
     top: 0;
     transform: rotate(45deg);
 }
@@ -187,7 +189,7 @@ after pszeudo-elemei */
 /* 18: a menu__hamburger--htx és az is-active osztályhoz egyszerre tartozó
  elemeken belül lévő span elemek after pszeudo-elemei */
 
-.menu__hamburger--htx.is-active>span:after {
+.menu__hamburger--htx.is-active span::after {
     bottom: 0;
     transform: rotate(-45deg);
 }
